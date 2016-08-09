@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Strict</title>
+
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+   
+    <header id="header">
+        <div class="wrapper">
+            <p class="logo"><a href="index.html">STRICT</a></p>
+            
+            <nav>
+                <a id="menuIcon" href="#"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="banner">
+        <div class="wrapper">
+                <div class="bannerContent">
+                    <h1>STRICT</h1>
+                    <hr>
+                    <p>STRICT is a responsive theme with a clean and minimal look.</p>
+                    <a href="#" class="btn">Call to action</a>
+                    <br>
+                    <a href="#" class="dnarrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                </div>
+        </div>
+    </section>
+    
+    <section id="navigation" class="navigation">
+        <div class="navMenuContainer">
+                <a id="closeIcon" class="close" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <ul>
+                    <li><a id="n1" href="#intro">INTRODUCTION</a></li>
+                    <hr>
+                    <li><a id="n2" href="#features">FEATURES</a></li>
+                    <hr>
+                    <li><a id="n3" href="#portfolio">PORTFOLIO</a></li>
+                    <hr>
+                    <li><a id="n4" href="#contact">CONTACT</a></li>
+                </ul>
+        </div>
+    </section>
+    
+    <a href="#header" class="upIcon"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+    
+    <section id="intro" class="intro">
+        <div class="wrapper">
+            <h1>Simple &amp; pure design</h1>
+            <p>Designers everywhere gush with admiration upon seeing a web design and exclaim "its beautiful, it's so clean!". There are a countless number of webdesign round-ups dedicated to 'clean' design and it is a term thrown around quite a bit in the web design community. It can be easy to spot a good example of clean design.</p>
+        </div>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="wrapper cf">
+            <div class="one">
+                <i class="fa fa-laptop fa-4x" aria-hidden="true"></i>
+                <h2>Optimized for all devices</h2>
+                <p>STRICT has been designed to be fully 
+                responsive on all devices</p>
+            </div>
+            <div class="two">
+                <i class="fa fa-paper-plane-o fa-4x" aria-hidden="true"></i>
+                <h2>Clean &amp; Minimal Design</h2>
+                <p>This multipurpose theme is especially created 
+                to be used for different projects.</p>
+            </div>
+            <div class="three">
+                <i class="fa fa-coffee fa-4x" aria-hidden="true"></i>
+                <h2>Font Awesome Icons</h2>
+                <p>This multipurpose theme is especially created 
+                to be used for different projects.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="portfolio">
+        <div class="wrapper">
+            <h1>Showcase your work like a pro</h1>
+            <p>Contact me if you like my work</p>
+            
+            <div class="gallery cf">
+                <a href="#"><div class="ovrly"></div><img src="images/portfolio1.jpg" alt=""></a>
+                <a href="#"><div class="ovrly"></div><img src="images/portfolio2.jpg" alt=""></a>
+                <a href="#"><div class="ovrly"></div><img src="images/portfolio3.jpg" alt=""></a>
+                <a href="#"><div class="ovrly"></div><img src="images/portfolio3.jpg" alt=""></a>
+                <a href="#"><div class="ovrly"></div><img src="images/portfolio1.jpg" alt=""></a>
+                <a href="#"><div class="ovrly"></div><img src="images/portfolio2.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contactform">
+        <div class="wrapper">
+            <h1>Stay with us</h1>
+            <p>We ensure quality &amp; support</p>
+            <form action="" class="cf">
+                <input class="singlefield" type="text" placeholder="Full Name"><br>
+                <input class="singlefield" type="email" placeholder="Email Address"><br>
+                <textarea name="" id="" cols="30" rows="7" placeholder="Message"></textarea><br>
+                <input id="subscribe" type="checkbox"><label for="subscribe">Subscribe Newsletter</label>
+                <input class="send" type="button" value="Send">
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="wrapper cf">
+            
+            <ul class="sociallinks">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+            <p>Copyright 2016, STRICT</p>
+        </div>
+    </footer>
+    
+    <script>
+        window.onload = function() {
+            var menu = document.getElementById('menuIcon'),
+                close = document.getElementById('closeIcon'),
+                n1 = document.getElementById('n1'),
+                n2 = document.getElementById('n2'),
+                n3 = document.getElementById('n3'),
+                n4 = document.getElementById('n4'),
+                navigation = document.getElementById('navigation');
+
+            function showmenu() {
+                navigation.className = 'navigation active';
+            }
+            function hidemenu() {
+                navigation.className = 'navigation';
+            }
+
+            menu.onclick = showmenu;
+            close.onclick = hidemenu;
+            n1.onclick = hidemenu;
+            n2.onclick = hidemenu;
+            n3.onclick = hidemenu;
+            n4.onclick = hidemenu;
+        }
+    </script>
+    
+</body>
+</html>

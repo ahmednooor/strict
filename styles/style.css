@@ -1,0 +1,804 @@
+/* ---------- Variables ---------- */
+/* ---------- Global Styles ---------- */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.wrapper {
+  max-width: 1172px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.btn {
+  padding: 15px 35px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* ---------- Specific Styles ---------- */
+header {
+  height: 100px;
+  background-color: #f6f9f9;
+  position: relative;
+}
+header .wrapper {
+  height: 100%;
+  position: relative;
+}
+header .wrapper p {
+  position: absolute;
+  top: 45%;
+  left: 16px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+}
+header .wrapper p:before {
+  display: inline-block;
+  content: url(../images/logoicon.jpg);
+  margin-right: 0.8rem;
+  position: relative;
+  top: 0.4rem;
+}
+header .wrapper p a {
+  text-decoration: none;
+  color: #4a5a7a;
+}
+header .wrapper nav {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+header .wrapper nav a {
+  color: #4a5a7a;
+}
+
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 6;
+}
+.navigation .navMenuContainer {
+  width: 240px;
+  height: 240px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #f6f9f9;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+}
+.navigation .navMenuContainer a.close {
+  text-decoration: none;
+  color: #4a5a7a;
+  float: right;
+  opacity: 0.6;
+}
+.navigation .navMenuContainer a.close:hover {
+  opacity: 1;
+}
+.navigation .navMenuContainer ul {
+  margin-top: 54%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  list-style: none;
+  text-align: center;
+}
+.navigation .navMenuContainer ul hr {
+  display: block;
+  background-color: #4a5a7a;
+  opacity: 0.6;
+  width: 160px;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.navigation .navMenuContainer ul li {
+  display: block;
+  margin-bottom: 4px;
+}
+.navigation .navMenuContainer ul li a {
+  padding: 6px;
+  display: block;
+  text-decoration: none;
+  color: #4a5a7a;
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.5;
+}
+.navigation .navMenuContainer ul li a:hover {
+  opacity: 1;
+}
+
+.active {
+  display: block;
+}
+
+.upIcon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  text-decoration: none;
+  color: #4a5a7a;
+  font-size: 40px;
+  z-index: 4;
+  opacity: 0.7;
+}
+.upIcon:hover {
+  opacity: 1;
+}
+
+.banner {
+  height: calc(100vh - 100px);
+  min-height: 460px;
+  background-color: #f6f9f9;
+  background-image: url(../images/bannerBG.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.banner .wrapper {
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.banner .wrapper .bannerContent {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 16px;
+}
+.banner .wrapper .bannerContent h1 {
+  font-size: 120px;
+  color: #f6f9f9;
+  font-weight: normal;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+.banner .wrapper .bannerContent hr {
+  width: 600px;
+  border-color: #15a4fa;
+  margin-bottom: 30px;
+}
+.banner .wrapper .bannerContent p {
+  font-size: 20px;
+  color: #f6f9f9;
+  margin-bottom: 40px;
+}
+.banner .wrapper .bannerContent a.btn {
+  display: inline-block;
+  color: #f6f9f9;
+  border: 1px solid #15a4fa;
+  text-decoration: none;
+  margin-bottom: 70px;
+}
+.banner .wrapper .bannerContent a.dnarrow {
+  display: inline-block;
+  color: #f6f9f9;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.intro {
+  height: 330px;
+  background-color: #f6f9f9;
+}
+.intro .wrapper {
+  height: 100%;
+  text-align: center;
+  padding: 80px 16px;
+}
+.intro .wrapper h1 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #4a5a7a;
+  margin-bottom: 25px;
+}
+.intro .wrapper p {
+  font-size: 20px;
+  color: #4a5a7a;
+  line-height: 1.6;
+}
+
+.features .wrapper {
+  padding: 60px 16px;
+  text-align: center;
+}
+.features .wrapper div {
+  width: 33.3%;
+  float: left;
+  padding: 0 20px;
+}
+.features .wrapper div i {
+  width: 100px;
+  height: 100px;
+  line-height: 1;
+  padding: 16px;
+  color: white;
+  background-color: #15a4fa;
+  margin-bottom: 32px;
+}
+.features .wrapper div h2 {
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 1;
+  color: #4a5a7a;
+  margin-bottom: 22px;
+}
+.features .wrapper div p {
+  font-size: 16px;
+  color: #4a5a7a;
+  line-height: 1.4;
+}
+
+.portfolio {
+  height: auto;
+  background-color: #f6f9f9;
+}
+.portfolio .wrapper {
+  text-align: center;
+  height: 100%;
+  padding: 80px 16px;
+}
+.portfolio .wrapper h1 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #4a5a7a;
+  margin-bottom: 14px;
+}
+.portfolio .wrapper p {
+  font-size: 16px;
+  color: #4a5a7a;
+  line-height: 1.6;
+  margin-bottom: 80px;
+}
+.portfolio .wrapper .gallery {
+  width: 100%;
+  text-align: center;
+}
+.portfolio .wrapper .gallery a {
+  position: relative;
+  display: inline-block;
+  max-width: 31%;
+  max-height: 320px;
+  margin: 10px;
+  overflow: hidden;
+}
+.portfolio .wrapper .gallery a .ovrly {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #15a4fa;
+}
+.portfolio .wrapper .gallery a:hover > .ovrly {
+  opacity: 0.6;
+}
+
+.contactform {
+  height: 720px;
+  background-image: url(../images/formBG.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.contactform .wrapper {
+  text-align: center;
+  height: 100%;
+  padding: 80px 16px;
+}
+.contactform .wrapper h1 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #f6f9f9;
+  margin-bottom: 10px;
+}
+.contactform .wrapper p {
+  font-size: 16px;
+  color: grey;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.contactform .wrapper form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contactform .wrapper form .singlefield,
+.contactform .wrapper form textarea {
+  font-family: 'Lato', sans-serif;
+  outline: 0;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 20px;
+  margin-bottom: 14px;
+  width: 100%;
+  background: transparent;
+  font-size: 16px;
+  color: lightgray;
+}
+.contactform .wrapper form input[type="checkbox"] {
+  display: none;
+}
+.contactform .wrapper form input[type="checkbox"]:checked + label:before {
+  font-family: FontAwesome;
+  content: "\f14a";
+  opacity: 0.8;
+  width: 18px;
+  margin-right: 10px;
+}
+.contactform .wrapper form label {
+  margin-top: 14px;
+  float: left;
+  color: #f6f9f9;
+  font-size: 16px;
+}
+.contactform .wrapper form label:before {
+  font-family: FontAwesome;
+  content: "\f0c8";
+  opacity: 0.8;
+  width: 18px;
+  margin-right: 10px;
+}
+.contactform .wrapper form .send {
+  outline: 0;
+  border: 1px solid #15a4fa;
+  border-radius: 3px;
+  padding: 14px;
+  margin-bottom: 14px;
+  width: 140px;
+  background: transparent;
+  font-size: 18px;
+  color: #f6f9f9;
+  line-height: 1;
+  float: right;
+}
+.contactform .wrapper form .send:hover {
+  cursor: pointer;
+}
+
+footer {
+  height: 90px;
+  background-color: #f6f9f9;
+}
+footer .wrapper {
+  height: 100%;
+  position: relative;
+}
+footer .wrapper p {
+  font-size: 16px;
+  color: #4a5a7a;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+footer .wrapper ul {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 5;
+}
+footer .wrapper ul li {
+  display: inline-block;
+  margin: 2px;
+}
+footer .wrapper ul li a {
+  display: block;
+  font-size: 20px;
+  color: #f6f9f9;
+  width: 40px;
+  height: 40px;
+  background-color: #15a4fa;
+  position: relative;
+}
+footer .wrapper ul li a:hover {
+  background-color: #4a5a7a;
+}
+footer .wrapper ul li a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 680px) {
+  header {
+    height: 100px;
+    background-color: #f6f9f9;
+    position: relative;
+  }
+  header .wrapper {
+    height: 100%;
+    position: relative;
+  }
+  header .wrapper p {
+    position: absolute;
+    top: 45%;
+    left: 16px;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  header .wrapper p:before {
+    display: inline-block;
+    content: url(../images/logoicon.jpg);
+    margin-right: 0.8rem;
+    position: relative;
+    top: 0.4rem;
+  }
+  header .wrapper p a {
+    text-decoration: none;
+    color: #4a5a7a;
+  }
+  header .wrapper nav {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  header .wrapper nav a {
+    color: #4a5a7a;
+  }
+
+  .banner {
+    height: calc(100vh - 100px);
+    min-height: 460px;
+    background-color: #f6f9f9;
+    background-image: url(../images/bannerBG.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .banner .wrapper {
+    height: 100%;
+    position: relative;
+    text-align: center;
+  }
+  .banner .wrapper .bannerContent {
+    position: absolute;
+    max-width: 90%;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 16px;
+  }
+  .banner .wrapper .bannerContent h1 {
+    font-size: 20vw;
+    color: #f6f9f9;
+    font-weight: normal;
+    margin-bottom: 30px;
+    line-height: 1;
+  }
+  .banner .wrapper .bannerContent hr {
+    width: 100%;
+    border-color: #15a4fa;
+    margin-bottom: 30px;
+  }
+  .banner .wrapper .bannerContent p {
+    font-size: 20px;
+    color: #f6f9f9;
+    margin-bottom: 40px;
+  }
+  .banner .wrapper .bannerContent a.btn {
+    display: inline-block;
+    color: #f6f9f9;
+    border: 1px solid #15a4fa;
+    text-decoration: none;
+    margin-bottom: 60px;
+  }
+  .banner .wrapper .bannerContent a.dnarrow {
+    display: inline-block;
+    color: #f6f9f9;
+    opacity: 0.7;
+    margin-bottom: 20px;
+  }
+
+  .intro {
+    height: auto;
+    background-color: #f6f9f9;
+  }
+  .intro .wrapper {
+    height: 100%;
+    text-align: center;
+    padding: 60px 16px;
+  }
+  .intro .wrapper h1 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #4a5a7a;
+    margin-bottom: 20px;
+  }
+  .intro .wrapper p {
+    font-size: 16px;
+    color: #4a5a7a;
+    line-height: 1.6;
+  }
+
+  .features .wrapper {
+    padding: 60px 16px;
+    text-align: center;
+  }
+  .features .wrapper div {
+    width: 100%;
+    float: left;
+    padding: 20px;
+  }
+  .features .wrapper div i {
+    width: 100px;
+    height: 100px;
+    line-height: 1;
+    padding: 16px;
+    color: white;
+    background-color: #15a4fa;
+    margin-bottom: 32px;
+  }
+  .features .wrapper div h2 {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1;
+    color: #4a5a7a;
+    margin-bottom: 22px;
+  }
+  .features .wrapper div p {
+    font-size: 16px;
+    color: #4a5a7a;
+    line-height: 1.4;
+  }
+
+  .portfolio {
+    height: auto;
+    background-color: #f6f9f9;
+  }
+  .portfolio .wrapper {
+    text-align: center;
+    height: 100%;
+    padding: 60px 16px;
+  }
+  .portfolio .wrapper h1 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #4a5a7a;
+    margin-bottom: 12px;
+  }
+  .portfolio .wrapper p {
+    font-size: 15px;
+    color: #4a5a7a;
+    line-height: 1.6;
+    margin-bottom: 60px;
+  }
+  .portfolio .wrapper .gallery {
+    width: 100%;
+    text-align: center;
+  }
+  .portfolio .wrapper .gallery a {
+    position: relative;
+    display: inline-block;
+    max-width: 47%;
+    max-height: 220px;
+    margin: 3px;
+    overflow: hidden;
+  }
+  .portfolio .wrapper .gallery a .ovrly {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #15a4fa;
+  }
+  .portfolio .wrapper .gallery a:hover > .ovrly {
+    opacity: 0.6;
+  }
+
+  .contactform {
+    height: auto;
+    background-image: url(../images/formBG.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .contactform .wrapper {
+    text-align: center;
+    height: 100%;
+    padding: 60px 16px;
+  }
+  .contactform .wrapper h1 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #f6f9f9;
+    margin-bottom: 8px;
+  }
+  .contactform .wrapper p {
+    font-size: 16px;
+    color: grey;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .contactform .wrapper form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .contactform .wrapper form .singlefield,
+  .contactform .wrapper form textarea {
+    font-family: 'Lato', sans-serif;
+    outline: 0;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 14px;
+    width: 100%;
+    background: transparent;
+    font-size: 16px;
+    color: lightgray;
+  }
+  .contactform .wrapper form input[type="checkbox"] {
+    display: none;
+  }
+  .contactform .wrapper form input[type="checkbox"]:checked + label:before {
+    font-family: FontAwesome;
+    content: "\f14a";
+    opacity: 0.8;
+    width: 18px;
+    margin-right: 10px;
+  }
+  .contactform .wrapper form label {
+    margin-top: 14px;
+    margin-bottom: 20px;
+    float: left;
+    color: #f6f9f9;
+    font-size: 16px;
+  }
+  .contactform .wrapper form label:before {
+    font-family: FontAwesome;
+    content: "\f0c8";
+    opacity: 0.8;
+    width: 18px;
+    margin-right: 10px;
+  }
+  .contactform .wrapper form .send {
+    outline: 0;
+    border: 1px solid #15a4fa;
+    border-radius: 3px;
+    padding: 14px;
+    margin-bottom: 14px;
+    width: 140px;
+    background: transparent;
+    font-size: 18px;
+    color: #f6f9f9;
+    line-height: 1;
+    float: right;
+  }
+  .contactform .wrapper form .send:hover {
+    cursor: pointer;
+  }
+
+  footer {
+    height: auto;
+    background-color: #f6f9f9;
+    padding: 40px 0;
+  }
+  footer .wrapper {
+    height: 100%;
+    position: relative;
+    text-align: center;
+  }
+  footer .wrapper p {
+    font-size: 16px;
+    color: #4a5a7a;
+    position: relative;
+    top: auto;
+    left: auto;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  footer .wrapper ul {
+    display: block;
+    list-style: none;
+    position: relative;
+    top: auto;
+    right: auto;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    margin-bottom: 30px;
+  }
+  footer .wrapper ul li {
+    display: inline-block;
+    margin: 2px;
+  }
+  footer .wrapper ul li a {
+    display: block;
+    font-size: 20px;
+    color: #f6f9f9;
+    width: 40px;
+    height: 40px;
+    background-color: #15a4fa;
+    position: relative;
+  }
+  footer .wrapper ul li a:hover {
+    background-color: #4a5a7a;
+  }
+  footer .wrapper ul li a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
